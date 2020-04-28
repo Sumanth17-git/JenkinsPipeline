@@ -7,13 +7,13 @@ pipeline
         {
             steps{
                 //Get source code from GitHub repository
-                git credentialsId:'GitHub', url:'https://github.com/Sumanth17-git/Project1.git'
+                git credentialsId:'GitHub', url:'https://github.com/Sumanth17-git/war-web-projects.git'
             }
         }
         stage("Build")
         {
             steps{
-                sh 'mvn install'
+                sh 'mvn clean deploy'
             }
         
         }
